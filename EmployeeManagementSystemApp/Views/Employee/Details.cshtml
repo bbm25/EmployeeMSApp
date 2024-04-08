@@ -1,0 +1,57 @@
+﻿@model EmployeeManagementSystemApp.Models.Employee
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container">
+    <h1 class="mt-4">Employee Details</h1>
+</div>
+<div class="row mt-4">
+    <div class="col-md-6">
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-5">First Name:</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model=>model.FirstName)</dd>
+            <dt class="col-sm-5">Last Name:</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model=>model.LastName)</dd>
+            <dt class="col-sm-5">Address:</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model=>model.Address)</dd>
+            <dt class="col-sm-5">Title:</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Title)</dd>
+            <dt class="col-sm-5">Email:</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Email)</dd>
+            <dt class="col-sm-5">Phone:</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Phone)</dd>
+        </dl>        
+    </div>
+</div>
+<div class="row mt-4">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Employee Departments</th>
+                    </tr>
+                </thead>
+            
+                @* <tbody>
+                    @foreach (var dept in ViewBag.AllDepts)
+                    {
+                        <tr>
+                            <td>@dept</td>
+                        </tr>
+                    }
+                </tbody> *@
+            </table>
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <p>
+                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a> |
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </p>
+        </div>
+    </div>
+
